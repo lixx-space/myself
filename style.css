@@ -1,0 +1,184 @@
+body {
+         margin: 0;
+         font-family: 'Roboto', sans-serif;
+         background: linear-gradient(150deg, #848484, #303030, #1A1A1A);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         color: white;
+         animation: fadeIn 1.5s ease forwards; /* Animasi untuk body */
+  }
+     @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+     .profile-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         transform: translateY(50px); /* Elemen mulai dari bawah */
+         animation: slideUp 1s ease-out forwards; /* Animasi untuk elemen container */
+         animation-delay: 0.1s; /* Tunda animasi agar masuk setelah body */
+  }
+     @keyframes slideUp {
+      0% {
+          opacity: 0;
+          transform: translateY(50px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+     .profile-img {
+         background: #ffd700;
+         border-radius: 27px;
+         padding: 7px;
+         margin-bottom: -50px;
+         z-index: 1;
+         animation: popIn 0.8s ease forwards;
+         animation-delay: 0.1s; /* Tunda animasi agar muncul belakangan */
+  }
+     @keyframes popIn {
+      0% {
+          transform: scale(0.5);
+          opacity: 0;
+      }
+      100% {
+          transform: scale(1);
+          opacity: 1;
+      }
+  }
+     .profile-img img {
+         border-radius: 20px;
+         width: 100px;
+         height: 100px;
+  }
+     .profile-card {
+         background: linear-gradient(135deg, #1A1A1A, #2E2E2E);
+         border-radius: 20px;
+         padding: 20px;
+         width: 300px;
+         text-align: center;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+         position: relative;
+         z-index: 0;
+         transform: scale(0.9);
+         animation: fadeInScale 1s ease forwards;
+         animation-delay: 0.1s;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+     .profile-card h1 {
+         font-size: 24px;
+         margin: 60px 0 10px 0;
+  }
+     .profile-card p {
+         font-size: 14px;
+         margin: 5px 0;
+  }
+     .profile-card .info {
+         margin: 20px 0;
+  }
+     .profile-card .info p {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 5px 0;
+  }
+     .profile-card .info p i {
+         margin-right: 10px;
+  }
+     .social-card {
+         background: linear-gradient(135deg, #232323, #3a3a3a);
+         border-radius: 20px;
+         padding: 20px;
+         width: 300px;
+         text-align: center;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+         margin-top: 20px;
+         transform: scale(0.9);
+         animation: fadeInScale 1s ease forwards;
+         animation-delay: 0.1s;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+     .social-card .social {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     .social-card .social a {
+         text-decoration: none;
+         color: white;
+         padding: 10px;
+         border-radius: 10px;
+         width: 80%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 10px;
+         flex-direction: column;
+         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk animasi */
+}
+     .social-card .social a:hover {
+    transform: scale(1.05); /* Efek memperbesar tombol */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+     .social-card .social a .icon-text {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+     }
+     .social-card .social a .icon-text i {
+         margin-right: 10px;
+         transition: color 0.3s ease; /* Transisi untuk perubahan warna */
+     }
+     .social-card .social a.email {
+         background: linear-gradient(135deg, #023e7a, #01b2ed);
+     }
+     .social-card .social a.instagram {
+         background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+     }
+     .social-card .social .details {
+         font-size: 12px;
+         margin-top: 10px;
+     }
+
+     /* Efek hover khusus untuk tombol Email */
+.social-card .social a.email:hover {
+  background: linear-gradient(135deg, #0062cc, #00aaff); /* Ubah warna saat hover */
+  color: white;
+}
+
+/* Efek hover khusus untuk tombol Instagram */
+.social-card .social a.instagram:hover {
+  background: linear-gradient(135deg, #c13584, #e1306c, #f77737); /* Ubah warna saat hover */
+  color: white;
+}
